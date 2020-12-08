@@ -1,0 +1,6 @@
+W x H
+small = 270x160
+medium_foter = 300x300
+medium_post = 360x280
+large = 770x350
+extra_large = 1900x700
