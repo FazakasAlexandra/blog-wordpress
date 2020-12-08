@@ -2,21 +2,35 @@
 
 <?php get_template_part('template-parts/card-extra-large'); ?>
 
+<?php wp_reset_query(); ?>
+
 <main class="main-home">
     <div class="cards-container">
-        <?php get_template_part('template-parts/cards-collection-top'); ?>
-        <?php get_template_part('template-parts/card-large'); ?>
-        <?php get_template_part('template-parts/cards-collection-bottom'); 
-                next_posts_link(); 
-                previous_posts_link();
+
+        <?php 
+        $counter = 1;
+        if (have_posts()) : 
+            while (have_posts()) : the_post();
+
+                if ($counter % 7 == 0) {
+                    get_template_part('template-parts/card-large');
+                } else {
+                    get_template_part('template-parts/card');
+                }
+                wp_reset_query();
+                $counter++;
+            endwhile;
+        endif;
         ?>
     </div>
+
     <div class="side">
         <?php get_template_part('template-parts/sidebar-posts'); ?>
-        <?php if(is_active_sidebar('sidebar')):?>
-            <?php dynamic_sidebar('sidebar');?>
-        <?php endif;?>
+        <?php if (is_active_sidebar('sidebar')) : ?>
+            <?php dynamic_sidebar('sidebar'); ?>
+        <?php endif; ?>
     </div>
+
 </main>
 
 <?php get_footer(); ?>
