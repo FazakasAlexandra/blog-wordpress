@@ -6,16 +6,14 @@
    <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class() ?>>
 
    <header>
-      <h3 id="logo">FASHION<div id="logo-rectangle"></div></h3>
-      <?php
+      <?php get_template_part('template-parts/logo');
       wp_nav_menu(
          array(
             'theme_location' => 'main-menu',
-            'container' => '' 
+            'container' => ''
          )
-      );
-      ?>
+      ); ?>
    </header>

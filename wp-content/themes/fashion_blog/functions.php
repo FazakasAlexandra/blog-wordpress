@@ -14,6 +14,12 @@ function wpb_add_google_fonts()
 
 add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');
 
+function enqueFontAwesome(){
+    wp_enqueue_style('font-awesone','https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+}
+
+add_action('wp_enqueue_scripts', 'enqueFontAwesome');
+
 // ADD MENUS
 add_theme_support('menus');
 
@@ -38,11 +44,18 @@ add_image_size('post_size', 1900, 700, false);
 add_theme_support('widgets');
 
 // REGISTER SIDEBARS
-function my_sidebars(){
+function my_sidebars()
+{
     register_sidebar(array(
         'name' => 'sidebar',
         'id' => 'sidebar',
         'before_title' => '<h4 class="sidebar">',
+        'after_title' => '</h1>'
+    ));
+    register_sidebar(array(
+        'name' => 'Social',
+        'id' => 'social-media-icons',
+        'before_title' => '<h4 class="social-media-icons">',
         'after_title' => '</h1>'
     ));
 }
@@ -51,12 +64,29 @@ add_action('widgets_init', 'my_sidebars');
 
 //  Limit the number of tags displayed by Tag Cloud widget  
 
-add_filter( 'widget_tag_cloud_args', 'tj_tag_cloud_limit' );
-function tj_tag_cloud_limit($args){ 
-	// Check if taxonomy option of the widget is set to tags
-	if ( isset($args['taxonomy']) && $args['taxonomy'] == 'post_tag' ){
-		$args['number'] = 15; // Number of tags to show
- 	}
-	return $args;
+add_filter('widget_tag_cloud_args', 'tj_tag_cloud_limit');
+function tj_tag_cloud_limit($args)
+{
+    // Check if taxonomy option of the widget is set to tags
+    if (isset($args['taxonomy']) && $args['taxonomy'] == 'post_tag') {
+        $args['number'] = 15; // Number of tags to show
+    }
+    return $args;
 }
 
+// PAGINATION
+
+function number_pagination()
+{
+
+    global $wp_query;
+    $big = 9999999; // need an unlikely integer
+    echo paginate_links(array(
+        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+        'format' => '?paged=%#%',
+        'current' => max(1, get_query_var('paged')),
+        'total' => $wp_query->max_num_pages,
+        'prev_text'          => __('<i class="fas fa-angle-left"></i> <p>PREVIOUS POSTS</p>'),
+        'next_text'          => __('<p>NEXT POSTS</p> <i class="fas fa-angle-right"></i>'),
+    ));
+}

@@ -1,0 +1,1 @@
+<h3 id="logo">FASHION<div id="logo-rectangle"></div></h3>
