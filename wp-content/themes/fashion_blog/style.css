@@ -12,6 +12,10 @@ Author: Fazakas Alexandra
     color: #171717;
 }
 
+img{
+    filter: grayscale(25%);   
+}
+
 /* HEADER */
 
 a {
@@ -63,6 +67,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     margin: 2rem 0rem;
+    margin-bottom: 0px;
     flex-wrap: wrap;
 }
 
@@ -175,7 +180,7 @@ header {
 #card-extra-large .card-info {
     position: absolute;
     top: 60%;
-    left: 11%;
+    left: 2%;
     height: fit-content;
     align-items: baseline;
     width: fit-content;
@@ -243,7 +248,7 @@ header {
     left: 0%;
     text-transform: uppercase;
     position: absolute;
-    background-color: #ffffffe3;
+    background-color: #ffffff69;
     border-bottom: solid;
     color: #404040;
     width: 100%;
@@ -252,6 +257,7 @@ header {
     font-weight: normal;
     letter-spacing: 0.1rem;
     font-size: 2.5rem;
+    z-index: 1;
 }
 
 .post-head img {
@@ -516,6 +522,39 @@ footer #menu-main-1 ul li a{
 
 footer p{
     margin-bottom: 40px;
+}
+
+.instagram-pictures-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.instagram-pictures-container h3,
+.instagram-pictures-container a {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.instagram-pictures-container a:hover{
+    cursor: pointer;
+}
+
+#pictures{
+    margin-top: 40px;
+    display: flex;
+    overflow: auto;
+    justify-content: center;
+    width: 100%;
+}
+
+#pictures img{
+    max-width: 300px !important;
+    max-height: 300px  !important;
+    margin-left: 20px;
 }
 
 @media(max-width:750px){

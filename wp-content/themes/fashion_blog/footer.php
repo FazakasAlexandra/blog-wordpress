@@ -1,6 +1,7 @@
 <footer>
 
     <?php 
+    get_template_part('template-parts/instagram-pictures');
     get_template_part('template-parts/logo');
     wp_nav_menu(
         array(

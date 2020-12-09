@@ -33,12 +33,11 @@ register_nav_menus(
 // ADD PICTURES
 add_theme_support('post-thumbnails');
 // ADD PICTURES SIZE
-add_image_size('S', 270, 160, true);
+add_image_size('S', 270, 160, false);
 add_image_size('M_post', 360, 280, true);
-add_image_size('M_footer', 300, 300, true);
+add_image_size('M_footer', 300, 320, true);
 add_image_size('L', 770, 350, true);
 add_image_size('XL', 1900, 700, true);
-add_image_size('post_size', 1900, 700, false);
 
 // ADD WIDGETS
 add_theme_support('widgets');
@@ -56,6 +55,12 @@ function my_sidebars()
         'name' => 'Social',
         'id' => 'social-media-icons',
         'before_title' => '<h4 class="social-media-icons">',
+        'after_title' => '</h1>'
+    ));
+    register_sidebar(array(
+        'name' => 'Instagram pictures',
+        'id' => 'instagram-pictures',
+        'before_title' => '<h4 class="instagram-pictures">',
         'after_title' => '</h1>'
     ));
 }
