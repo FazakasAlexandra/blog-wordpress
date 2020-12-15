@@ -14,8 +14,9 @@ function wpb_add_google_fonts()
 
 add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');
 
-function enqueFontAwesome(){
-    wp_enqueue_style('font-awesone','https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+function enqueFontAwesome()
+{
+    wp_enqueue_style('font-awesone', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css');
 }
 
 add_action('wp_enqueue_scripts', 'enqueFontAwesome');
@@ -33,7 +34,7 @@ register_nav_menus(
 // ADD PICTURES
 add_theme_support('post-thumbnails');
 // ADD PICTURES SIZE
-add_image_size('S', 270, 160, false);
+add_image_size('S', 270, 160, true);
 add_image_size('M_post', 360, 280, true);
 add_image_size('M_footer', 300, 320, true);
 add_image_size('L', 770, 350, true);
@@ -95,3 +96,11 @@ function number_pagination()
         'next_text'          => __('<p>NEXT POSTS</p> <i class="fas fa-angle-right"></i>'),
     ));
 }
+
+
+function my_excerpt_length()
+{
+    return 20;
+}
+
+add_filter('excerpt_length', 'my_excerpt_length');

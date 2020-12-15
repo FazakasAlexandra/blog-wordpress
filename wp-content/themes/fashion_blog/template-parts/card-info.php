@@ -10,4 +10,4 @@
         <p class="date"><?php the_date(); ?></p>
         <p class="author"><span>By</span> <?php the_author(); ?></p>
     </div>
-    </div>
+</div>

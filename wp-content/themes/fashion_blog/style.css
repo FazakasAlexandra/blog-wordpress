@@ -160,8 +160,21 @@ header {
     text-align: center;
 }
 
-.card-info ul li a {
+.card-info ul li a,
+#continue-reading {
     color: #C9A96E;
+}
+
+.about-post .card-info{
+    padding-bottom: 0px;
+}
+
+#continue-reading{
+    padding: 12px 60px;
+    border-top-style: solid;
+    border-top-color: black;
+
+    text-transform: uppercase;
 }
 
 .date-auth-container {
@@ -231,45 +244,64 @@ header {
 
 /* SINGLE POST */
 
+#main-post{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    padding-top: 0px;
+}
+
+#main-post .side{
+    margin-right: 2%;
+    margin-top: 0px;
+}
+
 .post {
+    margin-right: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.post .date{
+    margin: 0px;
+    padding: 0.5rem 2rem;
+}
 
-.post-head {
+.post-content h1 {
+    text-transform: capitalize;
+    width: 100%;
+    padding: 1.5rem 30px;
+    text-align: start;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+    font-size: 2.5rem;
+}
+
+.post figure {
     width: fit-content;
     height: fit-content;
     position: relative;
 }
 
-.post-head h1 {
-    top: 0%;
-    left: 0%;
-    text-transform: uppercase;
-    position: absolute;
-    background-color: #ffffff69;
-    border-bottom: solid;
-    color: #404040;
+.post figure img {
     width: 100%;
-    padding: 1.5rem 0rem;
-    text-align: center;
-    font-weight: normal;
-    letter-spacing: 0.1rem;
-    font-size: 2.5rem;
-    z-index: 1;
 }
 
-.post-head img {
-    width: 100%;
+.post-content {
+    margin-top: -10rem;
+    z-index: 1;
+    background-color: white;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 1%;
+
 }
 
 .post-content p {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     word-spacing: 5px;
-    text-indent: 90px;
-    padding: 2rem 5rem;
+    padding: 1rem 2rem;
     text-align: justify;
 }
 
@@ -297,7 +329,10 @@ header {
 .side #zoom-social-icons-widget-2 h4,
 #tag_cloud-2 h4,
 .pagination,
-footer .zoom-social-icons-widget a {
+footer .zoom-social-icons-widget a,
+.recent-posts h4,
+.about-post h4,
+#continue-reading {
     border-color: #E5E5E5 !important;
 }
 
@@ -310,7 +345,9 @@ footer .zoom-social-icons-widget a {
 
 .side #categories-4 h4,
 .side #zoom-social-icons-widget-2 h4,
-#tag_cloud-2 h4 {
+#tag_cloud-2 h4,
+.recent-posts h4,
+.about-post h4 {
     text-align: center;
     border-style: solid;
     font-weight: normal;
@@ -318,6 +355,11 @@ footer .zoom-social-icons-widget a {
     font-size: 16px;
     line-height: 21px;
     height: 21px;
+}
+
+.recent-posts h4,
+.about-post h4{
+    margin-bottom: 1rem;
 }
 
 .side #categories-4 ul li {
@@ -340,10 +382,19 @@ footer .zoom-social-icons-widget a {
 .recent-posts .card-info {
     box-shadow: none;
     border-bottom-style: solid;
+}
+
+.about-post .card-info,
+.recent-posts .card-info{
     margin-bottom: 2rem;
 }
 
-.recent-posts .card-info h1 a {
+.about-post .excerpt p  {
+    padding: 15px
+}
+
+.recent-posts .card-info h1 a,
+.about-post .card-info h1 a {
     font-size: 18px;
 }
 
@@ -547,7 +598,6 @@ footer p{
     margin-top: 40px;
     display: flex;
     overflow: auto;
-    justify-content: center;
     width: 100%;
 }
 
@@ -556,6 +606,8 @@ footer p{
     max-height: 300px  !important;
     margin-left: 20px;
 }
+
+
 
 @media(max-width:750px){
     .cards-container{
@@ -570,5 +622,15 @@ footer p{
 
     #card-extra-large .card-info{
         top: 40%;
+    }
+}
+
+@media (min-width: 2000px){
+    footer #pictures{
+        justify-content: center;
+    }
+
+    .main-home{
+        justify-content: center;
     }
 }
