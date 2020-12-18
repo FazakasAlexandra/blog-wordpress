@@ -9,11 +9,8 @@
 <body <?php body_class() ?>>
 
    <header>
-      <?php get_template_part('template-parts/logo');
-      wp_nav_menu(
-         array(
-            'theme_location' => 'main-menu',
-            'container' => ''
-         )
-      ); ?>
+      <?php
+      get_template_part('template-parts/logo');
+      get_template_part('template-parts/sidebars/menus/main')
+      ?>
    </header>

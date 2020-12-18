@@ -1,18 +1,20 @@
 <footer>
 
-    <?php 
-    get_template_part('template-parts/instagram-pictures');
-    get_template_part('template-parts/logo');
-    wp_nav_menu(
-        array(
-            'theme_location' => 'main-menu',
-            'container' => ''
-        )
-    ); ?>
+    <div class="instagram-pictures-container">
 
-    <?php if (is_active_sidebar('social-media-icons')) : 
-        dynamic_sidebar('social-media-icons'); ?>
-    <?php endif; ?>
+        <h3>Follow our <a>@fashion_instagram</a></h3>
+
+        <div id="pictures">
+            <?php get_template_part('template-parts/sidebars/instagram-pictures') ?>
+        </div>
+
+    </div>
+
+    <?php
+    get_template_part('template-parts/logo');
+    get_template_part('template-parts/sidebars/social-media-icons');
+    get_template_part('template-parts/sidebars/menus/main')
+    ?>
 
     <hr>
 
@@ -23,4 +25,5 @@
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

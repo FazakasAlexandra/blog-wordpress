@@ -1,25 +1,28 @@
 <?php
-function enqueueFashionBlogStyles()
+
+// ENQUE LINKS
+function enqueue_fashion_blog_styles()
 {
     wp_enqueue_style('style', get_stylesheet_uri());
 }
 
-add_action('wp_enqueue_scripts', 'enqueueFashionBlogStyles');
+add_action('wp_enqueue_scripts', 'enqueue_fashion_blog_styles');
 
 
-function wpb_add_google_fonts()
+function add_fashion_blog_google_fonts()
 {
     wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=PT+Serif&display=swap', false);
 }
 
-add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');
+add_action('wp_enqueue_scripts', 'add_fashion_blog_google_fonts');
 
-function enqueFontAwesome()
+function enqueue_fashion_blog_FontAwesome()
 {
     wp_enqueue_style('font-awesone', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css');
 }
 
-add_action('wp_enqueue_scripts', 'enqueFontAwesome');
+add_action('wp_enqueue_scripts', 'enqueue_fashion_blog_FontAwesome');
+
 
 // ADD MENUS
 add_theme_support('menus');
@@ -31,8 +34,11 @@ register_nav_menus(
     )
 );
 
+
 // ADD PICTURES
 add_theme_support('post-thumbnails');
+
+
 // ADD PICTURES SIZE
 add_image_size('S', 270, 160, true);
 add_image_size('M_post', 360, 280, true);
@@ -40,11 +46,13 @@ add_image_size('M_footer', 300, 320, true);
 add_image_size('L', 770, 350, true);
 add_image_size('XL', 1900, 700, true);
 
+
 // ADD WIDGETS
 add_theme_support('widgets');
 
+
 // REGISTER SIDEBARS
-function my_sidebars()
+function fashion_blog_my_sidebars()
 {
     register_sidebar(array(
         'name' => 'sidebar',
@@ -52,12 +60,14 @@ function my_sidebars()
         'before_title' => '<h4 class="sidebar">',
         'after_title' => '</h1>'
     ));
+
     register_sidebar(array(
         'name' => 'Social',
         'id' => 'social-media-icons',
         'before_title' => '<h4 class="social-media-icons">',
         'after_title' => '</h1>'
     ));
+
     register_sidebar(array(
         'name' => 'Instagram pictures',
         'id' => 'instagram-pictures',
@@ -66,12 +76,13 @@ function my_sidebars()
     ));
 }
 
-add_action('widgets_init', 'my_sidebars');
+add_action('widgets_init', 'fashion_blog_my_sidebars');
 
-//  Limit the number of tags displayed by Tag Cloud widget  
 
-add_filter('widget_tag_cloud_args', 'tj_tag_cloud_limit');
-function tj_tag_cloud_limit($args)
+// LIMIT NUMBER OF TAGS DISPLAYED IN TAG CLOUD WIDGET
+add_filter('widget_tag_cloud_args', 'fashion_blog_tag_cloud_limit');
+
+function fashion_blog_tag_cloud_limit($args)
 {
     // Check if taxonomy option of the widget is set to tags
     if (isset($args['taxonomy']) && $args['taxonomy'] == 'post_tag') {
@@ -80,9 +91,9 @@ function tj_tag_cloud_limit($args)
     return $args;
 }
 
-// PAGINATION
 
-function number_pagination()
+// ADD PAGINATION
+function fashion_blog_number_pagination()
 {
 
     global $wp_query;
@@ -98,9 +109,11 @@ function number_pagination()
 }
 
 
-function my_excerpt_length()
+
+// SET NUMBER OF CHARACTERS IN EXCERPT
+function fashion_blog_excerpt_length()
 {
     return 20;
 }
 
-add_filter('excerpt_length', 'my_excerpt_length');
+add_filter('excerpt_length', 'fashion_blog_excerpt_length');
