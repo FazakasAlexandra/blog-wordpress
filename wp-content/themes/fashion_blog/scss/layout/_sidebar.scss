@@ -1,0 +1,78 @@
+.sidebar {
+    width: 270px;
+    @include flex(column, '', nowrap);
+    
+    ul li {
+        @include flex(column, center, nowrap);
+        .zoom-social_icons-list-span {
+            padding: 2rem;
+        }
+    }
+
+    .recent-posts {
+        margin-bottom: 70px;
+
+        .card-info {
+            box-shadow: none;
+            border-bottom-style: solid;
+            border-color: $color-grey-light;
+            margin-bottom: 30px
+        }
+    }
+
+    #categories-4 {
+        ul {
+            margin-bottom: 70px;
+
+            li {
+                @include flex(row, space-between, nowrap);
+                border-bottom-style: solid;
+                border-color: $color-grey-light;
+                color: $color-text-light;
+
+                a {
+                    color: $color-text-light;
+                    font-size: 15px;
+                    line-height: 19px;
+                    padding: 1.5rem 0rem;
+                }
+            }
+
+            :last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    h4 {
+        @include border($color-grey-light);
+        color: $color-text-light;
+        width: 100%;
+        margin-bottom: 2.5rem;
+        text-align: center;
+        font-weight: normal;
+        padding: 1rem 0rem;
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+
+    .zoom-social-icons-widget{
+            margin-bottom: 60px;
+    }
+
+    .tagcloud {
+        @include flex(row, space-between, wrap);
+        height: 100%;
+        margin-top: 1rem;
+        margin-bottom: 70px;
+        height: fit-content;
+        text-transform: capitalize;
+
+        .tag-cloud-link {
+            font-size: 14px !important;
+            background-color: #f8f8f8;
+            padding: 5px 15px;
+            margin-top: 10px;
+        }
+    }
+}

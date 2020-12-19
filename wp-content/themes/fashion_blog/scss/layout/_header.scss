@@ -1,0 +1,23 @@
+header {
+    height: 30px;
+    margin: 35px 80px;
+    @include flex(row, space-between, nowrap);
+}
+
+#logo {
+    position: relative;
+    cursor: context-menu;
+    font-size: 25px;
+    line-height: 33px;
+    letter-spacing: 2.5px;
+
+    &-rectangle{
+        width: 125px;
+        height: 6px;
+        background-color: #c9a96e59;
+        position: absolute;
+        top: 70%;
+        z-index: -1;
+        left: -3px;
+    }
+}

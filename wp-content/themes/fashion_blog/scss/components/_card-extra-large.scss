@@ -1,0 +1,37 @@
+#card-extra-large{
+    position: relative;
+
+    img {
+        width: 100%;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+
+    .card-info {
+        position: absolute;
+        top: 60%;
+        left: 2%;
+        height: fit-content;
+        align-items: baseline;
+        width: fit-content;
+        box-shadow: none;
+
+        h1 {
+            margin: 0.4rem 0rem;
+            text-align: start;
+        }
+
+        h1 a {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 50px;
+            color:$color-white;
+        }
+
+        p, a, span {
+            font-size: 14px;
+            line-height: 18px;
+            color: $color-white;
+        }
+    }
+}

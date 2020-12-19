@@ -1,0 +1,45 @@
+.pagination {
+    @include border($color-grey-light);
+    display: flex;
+    width: fit-content;
+    padding: 0rem 1rem;
+    margin-top: 1rem;
+    margin: 60px 0px;
+
+    .page-numbers {
+        padding: 10px 20px;
+        font-weight: normal;
+        margin-left: -6px;
+        color: $color-grey;
+        display: flex;
+        align-items: center;
+
+        &.current {
+            padding: 10px 20px;
+            font-weight: 600;
+            color: $color-gold;
+            font-size: 25px;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 16px;
+            color: $color-grey;
+        }
+    }
+
+    .fa-angle-right,
+    .fa-angle-left {
+        font-size: 1.8rem;
+        color: $color-grey;
+        -webkit-text-stroke: 3px $color-white;
+    }
+
+    .fa-angle-right {
+        margin-left: 1rem;
+    }
+
+    .fa-angle-left {
+        margin-right: 1rem;
+    }
+}

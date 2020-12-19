@@ -1,0 +1,15 @@
+.main-home {
+    @include flex(row, space-evenly, wrap);
+    margin: 2rem 0rem;
+    margin-bottom: 0px;
+
+    &-wraper {
+        width: 810px;
+        @include flex(column, center, nowrap);
+    }
+
+    .cards-container {
+        width: 100%;
+        @include flex(row, center, wrap);
+    }
+}

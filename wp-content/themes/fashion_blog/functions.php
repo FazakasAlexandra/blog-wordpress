@@ -3,6 +3,7 @@
 // ENQUE LINKS
 function enqueue_fashion_blog_styles()
 {
+    wp_enqueue_style('style', get_template_directory_uri(). '/css/style.css');
     wp_enqueue_style('style', get_stylesheet_uri());
 }
 
@@ -15,6 +16,7 @@ function add_fashion_blog_google_fonts()
 }
 
 add_action('wp_enqueue_scripts', 'add_fashion_blog_google_fonts');
+
 
 function enqueue_fashion_blog_FontAwesome()
 {

@@ -1,0 +1,18 @@
+@mixin flex($direction, $justify-type, $wrap){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-type;
+    flex-wrap: $wrap;
+    align-items: $justify-type;
+}
+
+@mixin border($color){
+    border-style: solid;
+    border-color: $color;
+}
+
+@mixin shadow{
+    -webkit-box-shadow: 0px 3px 15px -5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 15px -5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 15px -5px rgba(0, 0, 0, 0.2);
+}

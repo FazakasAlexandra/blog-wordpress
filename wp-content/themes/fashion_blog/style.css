@@ -61,6 +61,12 @@ header {
     left: -3px;
 }
 
+#menu-main {
+    display: flex;
+    justify-content: space-between;
+    width: 370px;
+}
+
 /* LAYOUT */
 
 .main-home {
@@ -71,16 +77,10 @@ header {
     flex-wrap: wrap;
 }
 
-.main-home-cards-container{
+.main-home-wraper{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#menu-main {
-    display: flex;
-    justify-content: space-between;
-    width: 370px;
 }
 
 .sidebar {
@@ -376,7 +376,6 @@ footer .zoom-social-icons-widget a,
     font-size: 15px;
     line-height: 19px;
     padding: 1.5rem 0rem;
-
 }
 
 .recent-posts .card-info {

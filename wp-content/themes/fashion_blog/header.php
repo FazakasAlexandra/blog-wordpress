@@ -11,6 +11,6 @@
    <header>
       <?php
       get_template_part('template-parts/logo');
-      get_template_part('template-parts/sidebars/menus/main')
+      get_template_part('template-parts/menus/main')
       ?>
    </header>

@@ -9,7 +9,7 @@
 
 <main class="main-home">
 
-    <div class="main-home-cards-container">
+    <div class="main-home-wraper">
         <?php get_template_part('template-parts/cards-main-home'); ?>
 
         <div class="pagination">

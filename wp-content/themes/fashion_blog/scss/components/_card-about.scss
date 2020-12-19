@@ -1,0 +1,28 @@
+.about-post{
+    .card-info{
+        padding-bottom: 0px;
+        margin-bottom: 70px;
+    }
+    .excerpt p  {
+        padding: 15px
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+    h1 a {
+        font-size: 18px;
+    }
+
+    #continue-reading{
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0rem;
+        color: $color-gold;
+        border-top-style: solid;
+        border-top-color: $color-grey-light;
+        text-transform: uppercase;
+    }
+    
+}

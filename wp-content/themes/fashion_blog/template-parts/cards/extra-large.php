@@ -7,7 +7,7 @@ $the_query = new WP_Query($args['query'])?>
 
                 <div id="card-extra-large">
                         <?php get_template_part('template-parts/card-parts/thumbnail', null, array('thumbnail-size' => 'XL')); ?>
-                        <?php get_template_part('template-parts/card-parts/info'); ?>
+                        <?php get_template_part('template-parts/card-parts/info-extra-large'); ?>
                 </div>
 
         <?php endwhile; ?>

@@ -9,7 +9,7 @@
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
         
             <?php get_template_part('template-parts/card-parts/thumbnail', null, array('thumbnail-size' => 'S')); ?>
-            <?php get_template_part('template-parts/card-parts/info'); ?>
+            <?php get_template_part('template-parts/card-parts/info-small-medium'); ?>
 
         <?php endwhile; ?>
 
