@@ -5,6 +5,7 @@
 
     &-wraper {
         width: 810px;
+        height: fit-content;
         @include flex(column, center, nowrap);
     }
 

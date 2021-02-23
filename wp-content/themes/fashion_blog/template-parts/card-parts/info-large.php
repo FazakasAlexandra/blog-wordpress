@@ -5,7 +5,7 @@
 
     <div class="date-auth-container">
         <?php get_template_part('template-parts/card-parts/date-author') ?>
-        <p class="comments"><?php comments_number('2'); ?> comments</p>
+        <p class="comments"><?php comments_number(''); ?></p>
     </div>
 
     <?php get_template_part('template-parts/card-parts/excerpt') ?>

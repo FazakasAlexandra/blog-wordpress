@@ -5,6 +5,10 @@
     color: $color-text-dark;
 }
 
+.fa-heart{
+    color: $color-gold;
+}
+
 img{
     filter: grayscale(25%);   
 }
@@ -27,6 +31,6 @@ li {
 
 #menu-main {
     display: flex;
-    justify-content: space-between;
-    width: 370px;
+    justify-content: space-evenly; 
+    min-width: 200px;
 }

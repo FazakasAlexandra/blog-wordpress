@@ -4,7 +4,6 @@ Version: 0.1
 Author: Fazakas Alexandra
 */
 
-
 * {
     padding: 0px;
     margin: 0px;
@@ -604,34 +603,4 @@ footer p{
     max-width: 300px !important;
     max-height: 300px  !important;
     margin-left: 20px;
-}
-
-
-
-/* MEDIA  */
-
-@media(max-width:750px){
-    .cards-container{
-        width: 405px;
-    }
-}
-
-@media(max-width:600px){
-    .cards-container{
-        width: 405px;
-    }
-
-    #card-extra-large .card-info{
-        top: 40%;
-    }
-}
-
-@media (min-width: 2000px){
-    footer #pictures{
-        justify-content: center;
-    }
-
-    .main-home{
-        justify-content: center;
-    }
 }
